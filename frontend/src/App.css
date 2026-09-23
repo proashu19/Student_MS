@@ -51,6 +51,8 @@
 }
 
 .panel {
+  width: 100%;
+  box-sizing: border-box;
   max-width: 720px;
   margin: 0 auto;
   background: #ffffff;
@@ -90,6 +92,21 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
+}
+
+.subject-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subject-input-row input {
+  flex: 1;
+  min-width: 0;
+}
+
+.subject-input-row .btn {
+  flex-shrink: 0;
 }
 
 .form-field {
@@ -158,6 +175,10 @@ input:focus {
   color: #0f172a;
 }
 
+.student-panel {
+  max-width: 1040px;
+}
+
 .empty-state {
   margin: 0;
   color: #64748b;
@@ -200,6 +221,77 @@ input:focus {
 
 .student-email {
   color: #475569;
+}
+
+.course-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #2563eb;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.course-toggle:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.subjects-list,
+.subjects-preview-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.subjects-list li,
+.subjects-preview-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 6px 10px;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1e3a8a;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.subjects-list .empty-state {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #64748b;
+}
+
+.btn-remove {
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #1e40af;
+  font-size: 0.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.btn-remove:hover {
+  background: #bfdbfe;
 }
 
 .student-actions {

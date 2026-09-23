@@ -42,8 +42,8 @@ const onAddStudent = async (student) => {
     setStudents(students.filter((student) => student._id !== id));
   };
 
- const onUpdateStudent = async (id, name, email) => {
-    const res = await axios.put(`${API_URL}/${id}`, { name, email });
+ const onUpdateStudent = async (id, name, email, course , subjects) => {
+    const res = await axios.put(`${API_URL}/${id}`, { name, email, course, subjects });
     setStudents(students.map((student) =>
       student._id === id ? res.data : student
     ));

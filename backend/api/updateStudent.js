@@ -5,7 +5,7 @@ const updateStudent = async (req, res) => {
         const { name, email, course, subjects } = req.body;
 
         if (!name || !email || !course || !subjects) {
-            return res.status(400).json({ message: 'Name and email are required' });
+            return res.status(400).json({ message: 'Name, email, course and subjects are required' });
         }
 
         const student = await Student.findByIdAndUpdate(
